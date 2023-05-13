@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Машина за гласуване</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <h1><%= @title %></h1>
+    <table class="table table-hover table-striped">
+      <tr>
+        <th>Happy</th>
+        <td><%= @votes.fetch('Happy', 0) %></td>
+        <td><%= '#' * (@votes.fetch('Happy', 0)) %></td>
+      </tr>
+      <tr>
+        <th>Кривото</th>
+        <td><%= @votes.fetch('Кривото', 0) %></td>
+        <td><%= '#' * (@votes.fetch('Кривото', 0)) %></td>
+      </tr>
+      <tr>
+        <th>Мистър Пица</th>
+        <td><%= @votes.fetch('Мистър Пица', 0) %></td>
+        <td><%= '#' * (@votes.fetch('Мистър Пица', 0)) %></td>
+      </tr>
+      <tr>
+        <th>Слънце Луна</th>
+        <td><%= @votes.fetch('Слънце Луна', 0) %></td>
+        <td><%= '#' * (@votes.fetch('Слънце Луна', 0)) %></td>
+      </tr>
+    </table>
+    <p><a href="/">Гласувайте още</a></p>
+  </body>
+</html>
